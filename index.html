@@ -33,8 +33,7 @@ _    _                         _____
           <div class="cards container">
           <div class="card" v-for="member in members">
             <!--<div class="avatar"><img src={{ member.photoURI }}/></div>-->
-            <div class="firstname">{{ member.firstname }}</div>
-            <div class="lastname">{{ member.lastname }}</div>
+            <div class="firstname">{{ member.firstname }} {{ member.lastname }}.</div>
             <div class="year">{{ member.year[0] == "2" ? "Class of "+member.year : member.year }}</div>
           </div>
         </div>
