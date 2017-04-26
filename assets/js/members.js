@@ -40,7 +40,7 @@ var members = [
   year: "2020"
 },
 {
-  firstname: "Christopher",
+  firstname: "Chris",
   lastname: "M",
   year: "2020"
 },
