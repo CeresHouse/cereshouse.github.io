@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+_    _                         _____
+| |  | |                       / ____|
+| |__| | ___  _   _ ___  ___  | |     ___ _ __ ___  ___
+|  __  |/ _ \| | | / __|/ _ \ | |    / _ \ '__/ _ \/ __|
+| |  | | (_) | |_| \__ \  __/ | |___|  __/ | |  __/\__ \
+|_|  |_|\___/ \__,_|___/\___|  \_____\___|_|  \___||___/
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>House Ceres</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="assets/js/members.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+    <link rel="stylesheet" href="assets/css/index.css"/>
+    <link rel="icon" type="image/png" href="assets/img/logo.png"/>
+</head>
+<body>
+        <section class="hero">
+                <div class="twelve columns">
+                    <div class="hero-header">
+                        <img src="assets/img/logo.png">
+                        <h1 class="heading">Ceres</h1>
+                    </div>
+                </div>
+        </section>
+        <section class="padded contrast" id="app">
+          <h4 class="centered members heading">Members</h4>
+          <div class="cards container">
+          <div class="card" v-for="member in members">
+            <!--<div class="avatar"><img src={{ member.photoURI }}/></div>-->
+            <div class="firstname">{{ member.firstname }}</div>
+            <div class="lastname">{{ member.lastname }}</div>
+            <div class="year">{{ member.year[0] == "2" ? "Class of "+member.year : member.year }}</div>
+          </div>
+        </div>
+        </section>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
